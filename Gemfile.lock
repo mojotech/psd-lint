@@ -6,6 +6,7 @@ GEM
     haml (4.0.4)
       tilt
     hashie (2.0.5)
+    json (1.8.1)
     oily_png (1.1.0)
       chunky_png (~> 1.2.7)
     psd (1.4.3)
@@ -30,5 +31,6 @@ PLATFORMS
 
 DEPENDENCIES
   haml (= 4.0.4)
+  json (= 1.8.1)
   psd (= 1.4.3)
   sinatra (= 1.4.4)
