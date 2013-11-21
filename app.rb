@@ -7,8 +7,13 @@ get '/', :provides => 'html' do
   haml :index
 end
 
-post '/', :provides => 'json' do
+get '/grade', :provides => 'html' do
+  haml :grade
+end
+
+post '/', :provides => 'html' do
   PSD.open(params['psd'][:tempfile]) do |psd|
-    return psd.tree.to_hash.to_json
+    @tree = psd.tree.to_hash
+    haml :grade
   end
 end
