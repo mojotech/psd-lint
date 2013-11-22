@@ -1,8 +1,9 @@
 %script{src: "/vendor/lodash.js"}
 %script{src: "/test/test_psd.js"}
 
--# %script
--#  PSD = #{@tree.to_json}
+%script
+  - if (@tree)
+    PSD = #{@tree.to_json}
 
 %script{src: "/walker.js"}
 %script{src: "/fonts.js"}
