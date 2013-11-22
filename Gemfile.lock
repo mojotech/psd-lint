@@ -6,9 +6,9 @@ GEM
     haml (4.0.4)
       tilt
     hashie (2.0.5)
-    json (1.8.1)
     oily_png (1.1.0)
       chunky_png (~> 1.2.7)
+    oj (2.2.3)
     psd (1.4.3)
       bindata
       oily_png
@@ -16,6 +16,8 @@ GEM
       rake
     psd-enginedata (1.0.0)
       hashie (~> 2.0)
+    psd_native (0.5.0)
+      psd (>= 1.4.1)
     rack (1.5.2)
     rack-protection (1.5.1)
       rack
@@ -31,6 +33,6 @@ PLATFORMS
 
 DEPENDENCIES
   haml (= 4.0.4)
-  json (= 1.8.1)
-  psd (= 1.4.3)
+  oj (= 2.2.3)
+  psd_native (= 0.5.0)
   sinatra (= 1.4.4)

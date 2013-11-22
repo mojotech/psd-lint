@@ -1,7 +1,7 @@
-require 'json'
+require 'oj'
 require 'sinatra'
 require 'haml'
-require 'psd'
+require 'psd_native'
 
 get '/', :provides => 'html' do
   haml :index
