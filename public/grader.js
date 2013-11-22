@@ -4,4 +4,5 @@
   console.log(LNT.getBlendingModes());
   console.log(LNT.getLayerTypes());
   console.log(LNT.getFontSizes());
+  console.log(LNT.getEmptyGroups());
 })();
