@@ -3,7 +3,7 @@
 
 %script
   - if (@tree)
-    PSD = #{Oj.dump(@tree)}
+    PSD = #{Oj.dump(@tree, mode: :compat)}
 
 %script{src: "/walker.js"}
 %script{src: "/fonts.js"}
