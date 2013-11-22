@@ -5,13 +5,20 @@
     var emptyGroups = [];
 
     _(PSD.children).each(function(v) {
-      if (v.type === "group") {
-        if (v.children.length === 0) {
-          emptyGroups.push(v.name);
+      LNT.propertyWalker(v, function(n, prop) {
+        if (n.type === "group" && !hasChildren(n)) {
+          emptyGroups.push(n.name);
         }
-      }
+      });
     });
 
     return emptyGroups;
   };
+
+  function hasChildren(n) {
+    if (typeof n.children === "undefined")  {
+      return false
+    }
+    return !!(n.children.length > 0);
+  }
 }());
