@@ -21,12 +21,22 @@
   };
 
   LNT.getFontSizes = function() {
-    return _(PSD.children).map(function(v) {
-      return LNT.propertyWalker(v, function(node, p) {
+    var fontSizes = {};
+
+    _(PSD.children).each(function(v) {
+      LNT.propertyWalker(v, function(node, p) {
         if (node.text) {
-          p.push(node.text.font.sizes[0]);
+          if (typeof fontSizes[node.text.font.sizes[0]] === "undefined") {
+            fontSizes[node.text.font.sizes[0]] = {
+              layers: [node.name]
+            }
+          } else {
+            fontSizes[node.text.font.sizes].layers.push(node.name);
+          }
         }
       });
-    }).flatten().valueOf();
+    });
+
+    return fontSizes;
   };
 }());
