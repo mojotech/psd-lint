@@ -9,7 +9,7 @@
 
   LNT.getFontSizes = function() {
     return fontHashWalk(function(n) {
-      return n.text.font.sizes;
+      return n.text.font.sizes[0];
     });
   };
 
