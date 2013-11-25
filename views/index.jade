@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h2 Upload a psd
+
+  form(method= "post", enctype= "multipart/form-data", action=workerPath)
+    input(type= "file", name= "psd")
+    input(type= "submit")
