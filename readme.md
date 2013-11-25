@@ -4,6 +4,12 @@ Work In Progress
 Psd Lint
 -----------
 
+### Dev
+* ```npm install -g roots```
+* ```bundle install```
+* ```bundle exec ruby app.rb```
+* ```roots watch```
+
 ### Tests in place
 * Find all unnamed layers
 * Find all font's used
@@ -11,7 +17,6 @@ Psd Lint
 * Find all blending modes used
 * Find all font sizes used
 * Find all empty groups
-
 
 ### Adding Tests
 * create a new test file
@@ -36,7 +41,3 @@ Psd Lint
   }).flatten().uniq().valueOf();
 ```
 
-### Dev
-
-* ```bundle install```
-* ```ruby app.rb```
