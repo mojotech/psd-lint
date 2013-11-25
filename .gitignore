@@ -28,3 +28,4 @@ Procfile.dev
 .sass-cache
 vendor/bundle
 *.log
+public
