@@ -19,6 +19,7 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
         count: _.keys(LNT.getBlendingModes()).length,
         title: "Blending modes used"
         data: LNT.getBlendingModes()
+        view: 'BlendingModes'
       }, {
         count: _.keys(LNT.getFontSizes()).length,
         title: "Different font sizes"
