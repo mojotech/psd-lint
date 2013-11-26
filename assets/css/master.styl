@@ -1,52 +1,22 @@
 global-reset()
 
-$block_size = 94px
-$seafoam    = #55DB9F
-$grey       = #969696
-$large_font = 30px
-
-html
-  font-family: helvetica
-  font-weight: 400
-
-.results
-  max-width: 900px
-  margin: 0 auto
+@import "_variables"
+@import "_mixins"
+@import "_results"
 
 .app-headline
   text-align: center
   color: $grey
-  font-size: $large_font * 2
+  font-size: 200%
   border-bottom: solid 1px $seafoam
   padding: $block_size * 0.25 0
   font-weight: 100
 
-.result-count
-  display: inline-block
-  background: $seafoam
-  color: #FFF;
-  width: $block_size
-  height: $block_size
-  font-weight: 100
+html
+  font-family: helvetica
+  font-weight: 400
   font-size: $large_font
-  line-height: $block_size
-  text-align: center
+  transition(all  300ms)
 
-.result-title
-  margin-left: $block_size * .5
-  display: inline-block
-  color: $grey
-  font-size: $large_font
-  font-weight: 200
-
-.result .expand
-  float: right
-  width: $block_size
-  font-size: $large_font
-  line-height: $block_size
-  text-align: center
-  color: $grey
-  cursor: pointer
-
-.result
-  margin: $block_size*0.25
+  @media screen and (max-width: 600px)
+    font-size: $large_font * 0.6

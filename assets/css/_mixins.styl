@@ -1,0 +1,7 @@
+adaptive-block(args...)
+  for p in args
+    {p}: $block_size
+
+  @media screen and (max-width: 600px)
+    for p in args
+      {p}: $block_size * 0.6
