@@ -10,5 +10,14 @@
 #= require "linters/_empty_groups.js"
 #= require "linters/_blending_modes.js"
 
+
+# application
+#= require "_application"
+
+# views
+#= require "views/_grade_layout"
+
 # grader
 #= require "_grader.js"
+
+$ -> App.start()
