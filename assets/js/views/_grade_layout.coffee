@@ -8,7 +8,8 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
       list = new Backbone.Collection([{
         count: LNT.getBadLayerNames().length,
         title: "Poorly named layers"
-        data: LNT.getBadLayerNames()
+        data: LNT.getBadLayerNames(),
+        view: 'BadLayers'
       }, {
         count: _.keys(LNT.getFontNames()).length,
         title: "Different fonts in use"

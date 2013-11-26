@@ -18,5 +18,6 @@
 #= require "views/_grade_layout"
 #= require "views/_results"
 #= require "views/_result_row"
+#= require "views/_bad_layers"
 
 $ -> App.start()
