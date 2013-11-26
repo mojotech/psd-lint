@@ -10,4 +10,4 @@ watcher_ignore_folders: ['components']
 locals:
   title: 'PSD Lint'
   workerPath: 'http://localhost:4567/'
-# templates: 'views/templates'
+templates: 'assets/js/templates'
