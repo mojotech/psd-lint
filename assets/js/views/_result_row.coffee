@@ -6,6 +6,12 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
     regions:
       expandableContent: '.expandable-content'
 
+    events:
+      'click .expand': 'expandRow'
+
+    expandRow: ->
+      @$('> .expandable-content').toggle()
+
     onShow: ->
       if @model?.get('view')?
         v = App.Views[@model.get('view')]

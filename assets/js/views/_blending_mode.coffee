@@ -3,3 +3,8 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
     template: templates.blending_mode
     tagName: 'li'
     className: 'blending-mode'
+    events:
+      'click .used-in-count': 'expandRow'
+
+    expandRow: ->
+      @$('.expandable-content').toggle()
