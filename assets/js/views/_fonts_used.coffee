@@ -13,10 +13,4 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
           , this
       )
 
-    getItemView: ->
-      class SingleLayer extends Backbone.Marionette.ItemView
-        tagName: 'li'
-        className: 'layer-name'
-        attributes: ->
-          "style": "font-family: #{@model.get('name')}, helvetica"
-        template: _.template("<%- name %>")
+    getItemView: -> Views.FontUsed

@@ -20,5 +20,6 @@
 #= require "views/_result_row"
 #= require "views/_bad_layers"
 #= require "views/_fonts_used"
+#= require "views/_single_font"
 
 $ -> App.start()

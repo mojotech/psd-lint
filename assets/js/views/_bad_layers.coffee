@@ -4,12 +4,13 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
     className: 'badLayers'
     constructor: ->
       super
-      @collection = new Backbone.Collection _.map(
-        @model.get('data'), (v) -> {name: v}
-      )
+      unless @collection
+        @collection = new Backbone.Collection _.map(
+          @model.get('data'), (v) -> {name: v}
+        )
 
     getItemView: ->
       class SingleLayer extends Backbone.Marionette.ItemView
         tagName: 'li'
-        className: 'layer-name'
+        className: 'layer-name text-orb'
         template: _.template("<%- name %>")
