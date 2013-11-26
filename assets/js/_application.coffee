@@ -1,6 +1,5 @@
 window.App = new Backbone.Marionette.Application
 
 App.on 'initialize:after', ->
-  new App.Views.GradeLayout({
-    el: '#app'
-  }).render()
+  App.addRegions 'appRegion': '#app'
+  App.appRegion.show new App.Views.GradeLayout
