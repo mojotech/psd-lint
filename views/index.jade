@@ -1,8 +1,9 @@
 extends layout
+block head
+  script(src="js/uploader.js", type="text/javascript")
 
 block content
+  #progress
+    .bar
   h2 Upload a psd
-
-  form(method= "post", enctype= "multipart/form-data", action=workerPath)
-    input(type= "file", name= "psd")
-    input(type= "submit")
+  input#fileupload(type= "file", name= "psd", data-url=workerPath)
