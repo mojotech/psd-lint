@@ -1,7 +1,7 @@
 !(function() {
   LNT = window.LNT || {};
 
-  LNT.getEmptyGroups = function() {
+  LNT.getEmptyGroups = function(PSD) {
     var emptyGroups = [];
 
     _(PSD.children).each(function(v) {

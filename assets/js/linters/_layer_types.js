@@ -1,7 +1,7 @@
 !(function() {
   LNT = window.LNT || {};
 
-  LNT.getLayerTypes = function() {
+  LNT.getLayerTypes = function(PSD) {
     var nodeTypes = _(PSD.children).map(function(v) {
       return LNT.propertyWalker(v, 'type');
     }).flatten().valueOf();

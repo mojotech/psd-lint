@@ -1,7 +1,7 @@
 !(function() {
   LNT = window.LNT || {};
 
-  LNT.getBlendingModes = function() {
+  LNT.getBlendingModes = function(PSD) {
     var hash = {};
 
     _(PSD.children).each(function(v) {
