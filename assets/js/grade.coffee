@@ -25,5 +25,6 @@
 #= require "views/_upload"
 #= require "views/_font_sizes"
 #= require "views/_font_size"
+#= require "views/_empty_groups"
 
 $ -> App.start()

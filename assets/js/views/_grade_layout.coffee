@@ -29,6 +29,7 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
         count: LNT.getEmptyGroups(@options.psd).length,
         title: "Empty Groups"
         data: LNT.getEmptyGroups(@options.psd)
+        view: 'EmptyGroups'
       }])
 
       @results.show new Views.Results(
