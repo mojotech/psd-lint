@@ -9,3 +9,9 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
           _.map(@model.get('layers'), (v) -> {name: v})
         )
       })
+
+    events:
+      'click .used-in-count': 'expandRow'
+
+    expandRow: ->
+      @$('.expandable-content').toggle()
