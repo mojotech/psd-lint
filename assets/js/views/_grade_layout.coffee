@@ -24,6 +24,7 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
         count: _.keys(LNT.getFontSizes(@options.psd)).length,
         title: "Different font sizes"
         data: LNT.getFontSizes(@options.psd)
+        view: 'FontSizes'
       }, {
         count: LNT.getEmptyGroups(@options.psd).length,
         title: "Empty Groups"

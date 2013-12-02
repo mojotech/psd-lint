@@ -23,5 +23,7 @@
 #= require "views/_blending_modes"
 #= require "views/_blending_mode"
 #= require "views/_upload"
+#= require "views/_font_sizes"
+#= require "views/_font_size"
 
 $ -> App.start()
