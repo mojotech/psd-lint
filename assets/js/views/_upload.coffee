@@ -7,7 +7,7 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
       templates.uploader
 
     templateHelpers:
-      workerPath: 'http://localhost:4567/'
+      workerPath: window.config.workerPath
 
     onShow: ->
       @$('#fileupload').fileupload

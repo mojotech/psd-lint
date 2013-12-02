@@ -1,3 +1,4 @@
+#= require "config.js"
 #= require "vendor/_jquery.js"
 #= require "vendor/_lodash.js"
 #= require "vendor/_backbone.js"
