@@ -1,15 +1,13 @@
 App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
-  class Views.BlendingModes extends Marionette.CollectionView
+  class Views.ExpandableLayers extends Marionette.CollectionView
+    tagName: 'ul'
     constructor: ->
       super
 
       @collection = new Backbone.Collection _.map(
           @model.get('data'),
           (v, k) ->
-            {
-              name: k
-              layers: v
-            }
+            v.name = k
+            v
+          , this
       )
-
-    getItemView: -> Views.BlendingMode

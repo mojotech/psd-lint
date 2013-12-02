@@ -14,6 +14,7 @@
 
 # views
 #= require "views/_layer_expandable"
+#= require "views/_expandable_layers"
 #= require "views/_grade_layout"
 #= require "views/_results"
 #= require "views/_result_row"
