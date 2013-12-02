@@ -1,5 +1,3 @@
-#= require "test/_test_psd.js"
-
 # utils
 #= require "util/_walker.js"
 
@@ -10,9 +8,9 @@
 #= require "linters/_empty_groups.js"
 #= require "linters/_blending_modes.js"
 
-
 # application
 #= require "_application"
+#= require "_router"
 
 # views
 #= require "views/_layer_expandable"
@@ -24,5 +22,6 @@
 #= require "views/_single_font"
 #= require "views/_blending_modes"
 #= require "views/_blending_mode"
+#= require "views/_upload"
 
 $ -> App.start()

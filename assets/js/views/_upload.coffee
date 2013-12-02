@@ -1,0 +1,25 @@
+App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
+  class Views.Upload extends Marionette.Layout
+    getTemplate: ->
+      if @uploadComplete
+        return templates.processing
+
+      templates.uploader
+
+    templateHelpers:
+      workerPath: 'http://localhost:4567/'
+
+    onShow: ->
+      @$('#fileupload').fileupload
+        dataType: 'json'
+        progressall: (e, data)  =>
+          progress = parseInt(data.loaded / data.total * 100, 10)
+          @$('#progress .bar').css
+              'width': progress + '%'
+          if progress is 100
+            @uploadComplete = true
+            @render()
+        done: (e, data) ->
+          App.appRegion.show new App.Views.GradeLayout({
+            psd: data.result
+          })
