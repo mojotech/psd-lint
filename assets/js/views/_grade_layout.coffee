@@ -26,7 +26,7 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
         data: LNT.getFontSizes(@options.psd)
         view: 'FontSizes'
       }, {
-        count: LNT.getEmptyGroups(@options.psd).length,
+        count: LNT.getEmptyGroups(@options.psd).length
         title: "Empty Groups"
         data: LNT.getEmptyGroups(@options.psd)
         view: 'EmptyGroups'
