@@ -10,7 +10,7 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
       'click .expand': 'expandRow'
 
     expandRow: ->
-      @$('> .expandable-content').toggle()
+      @$el.toggleClass 'expanded'
 
     onShow: ->
       if @model?.get('view')?
