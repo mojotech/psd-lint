@@ -1,14 +1,14 @@
-Work In Progress
-============
-
-Psd Lint
------------
+# Psd Lint
 
 ### Dev
 * ```npm install -g roots```
 * ```bundle install```
 * ```bundle exec ruby app.rb```
 * ```roots watch```
+
+
+### Changing the worker server location
+  * edit ```workerPath``` in ```assets/js/config.js```
 
 ### Tests in place
 * Find all unnamed layers
