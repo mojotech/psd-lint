@@ -1,5 +1,6 @@
 App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
   class Views.Upload extends Marionette.Layout
+    className: 'uploader'
     getTemplate: ->
       if @uploadComplete
         return templates.processing
