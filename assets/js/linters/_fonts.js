@@ -18,7 +18,7 @@
 
     _(PSD.children).each(function(v) {
       LNT.propertyWalker(v, function(node, p) {
-        if (node.text) {
+        if (node.text && typeof keyLookup(node) != "undefined") {
           if (typeof hash[keyLookup(node)] === "undefined") {
             hash[keyLookup(node)] = {
               layers: [node.name]
