@@ -3,6 +3,7 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
     regions:
       'expandable': '.expandable-content'
 
+    className: -> "expandable-row"
     onShow: ->
       @expandable.show new Views.BadLayers({
         collection: new Backbone.Collection(
