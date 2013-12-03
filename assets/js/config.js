@@ -3,7 +3,7 @@
 
   data = {
     title: 'PSD Lint',
-    workerPath: 'http://localhost:4567/'
+    workerPath: 'process/'
   };
 
   if ((typeof module !== "undefined" && module !== null ? module.exports : void 0) != null) {
