@@ -35,7 +35,7 @@
 * ```bundle exec ruby app.rb```
 * ```roots watch```
 * ```open http://localhost/```
-* ### profit
+* profit
 
 ### Tests in place
 * Find all unnamed layers
