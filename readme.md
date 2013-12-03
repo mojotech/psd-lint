@@ -1,14 +1,41 @@
 # Psd Lint
 
 ### Dev
+
+#### Setup
+* brew install nginx
+* open /usr/local/etc/nginx/nginx.conf
+  * set your file contents to
+  * ```
+      events {
+      }
+
+      http {
+        server {
+          client_max_body_size 200M;
+
+          location /process {
+            proxy_pass "http://localhost:4567/";
+            proxy_set_header Host $http_host;
+          }
+
+          location / {
+            proxy_pass "http://localhost:1111";
+            proxy_set_header Host $http_host;
+          }
+        }
+      }
+    ```
 * ```npm install -g roots```
 * ```bundle install```
+
+#### Developing
+* ```sudo nginx```
+  * to stop ```sudo nginx -s stop```
 * ```bundle exec ruby app.rb```
 * ```roots watch```
-
-
-### Changing the worker server location
-  * edit ```workerPath``` in ```assets/js/config.js```
+* ```open http://localhost/```
+* ### profit
 
 ### Tests in place
 * Find all unnamed layers
