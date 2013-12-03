@@ -1,7 +1,7 @@
 module.exports =
   ignore_files: ['_*', 'readme*', '.gitignore',
     '.DS_Store', 'layout.jade', 'app.rb', 'config.ru', 'Gemfile',
-    'Gemfile.lock', 'readme.md'
+    'Gemfile.lock', 'readme.md', 'deploy.conf'
     ]
   ignore_folders: ['.git']
 

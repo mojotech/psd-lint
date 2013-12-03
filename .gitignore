@@ -29,3 +29,4 @@ Procfile.dev
 vendor/bundle
 *.log
 public
+deploy.conf
