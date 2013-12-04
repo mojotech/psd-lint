@@ -1,5 +1,5 @@
 App.module "Models", (Models, App, Backbone, Marionette, $, _) ->
-  class Models.EmptyGroups extends Backbone.Model
+  class Models.EmptyGroups extends Models.LintResult
     defaults:
       title: "Empty Groups"
       view: 'EmptyGroups'

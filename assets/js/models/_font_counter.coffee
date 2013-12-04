@@ -1,8 +1,7 @@
 App.module "Models", (Models, App, Backbone, Marionette, $, _) ->
-  class Models.FontCounter extends Backbone.Model
+  class Models.FontCounter extends Models.LintResult
     defaults:
       title: "Different fonts in use"
       view: 'FontsUsed'
 
-    countCalc: (d) -> _.keys(d).length
     grade: (d) -> 4 / @countCalc(d)

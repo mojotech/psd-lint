@@ -14,6 +14,7 @@
 #= require "_router"
 
 #models
+#= require "models/_lint_result"
 #= require "models/_poorly_named"
 #= require "models/_font_counter"
 #= require "models/_blending_modes"
