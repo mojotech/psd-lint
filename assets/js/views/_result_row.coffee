@@ -18,7 +18,7 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
 
     serializeData: ->
       _.extend {}, @model.attributes,
-        grade: @model.grade?(@model.get('data'))
+        grade: @model.toLetter?(@model.grade?(@model.get('data')))
 
     templateHelpers: ->
       countCalulation: @model.countCalc
