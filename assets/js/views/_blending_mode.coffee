@@ -13,5 +13,5 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
     className: ->
      super + ' blending-mode'
 
-    onShow: -> @$('[title]').tooltip()
+    onDomRefresh: -> @$('[title]').tooltip()
 
