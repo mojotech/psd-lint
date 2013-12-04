@@ -6,27 +6,27 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
 
     onRender: ->
       list = new Backbone.Collection([{
-        count: LNT.getBadLayerNames(@options.psd).length,
+        countCalc: (d) -> d.length
         title: "Poorly named layers"
         data: LNT.getBadLayerNames(@options.psd),
         view: 'BadLayers'
       }, {
-        count: _.keys(LNT.getFontNames(@options.psd)).length,
+        countCalc: (d) -> _.keys(d).length
         title: "Different fonts in use"
         data: LNT.getFontNames(@options.psd)
         view: 'FontsUsed'
       }, {
-        count: _.keys(LNT.getBlendingModes(@options.psd)).length,
+        countCalc: (d) -> _.keys(d).length
         title: "Blending modes used"
         data: LNT.getBlendingModes(@options.psd)
         view: 'BlendingModes'
       }, {
-        count: _.keys(LNT.getFontSizes(@options.psd)).length,
+        countCalc:(d) -> _.keys(d).length
         title: "Different font sizes"
         data: LNT.getFontSizes(@options.psd)
         view: 'FontSizes'
       }, {
-        count: LNT.getEmptyGroups(@options.psd).length
+        countCalc: (d) -> d.length
         title: "Empty Groups"
         data: LNT.getEmptyGroups(@options.psd)
         view: 'EmptyGroups'

@@ -12,6 +12,9 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
     expandRow: ->
       @$el.toggleClass 'expanded'
 
+    templateHelpers: ->
+      countCalulation: @model.get('countCalc')
+
     onShow: ->
       if @model?.get('view')?
         v = App.Views[@model.get('view')]
