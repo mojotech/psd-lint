@@ -14,10 +14,10 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
 
     serializeData: ->
       _.extend {}, @model.attributes,
-        grade: @model.get('grade')(@model.get('data'))
+        grade: @model.grade(@model.get('data'))
 
     templateHelpers: ->
-      countCalulation: @model.get('countCalc')
+      countCalulation: @model.countCalc
 
     onShow: ->
       v = App.Views[@model.get('view')]

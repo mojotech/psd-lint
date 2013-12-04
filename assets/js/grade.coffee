@@ -13,6 +13,13 @@
 #= require "_application"
 #= require "_router"
 
+#models
+#= require "models/_poorly_named"
+#= require "models/_font_counter"
+#= require "models/_blending_modes"
+#= require "models/_font_sizes"
+#= require "models/_empty_groups"
+
 # views
 #= require "views/_layer_expandable"
 #= require "views/_expandable_layers"
