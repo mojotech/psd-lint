@@ -2,6 +2,7 @@
 #= require "util/_walker.js"
 
 # linters
+#= require "linters/_total_count.js"
 #= require "linters/_layers.js"
 #= require "linters/_layer_types.js"
 #= require "linters/_fonts.js"
