@@ -17,11 +17,13 @@
   font-weight: 200
 
 .result .expand
-  float: right
+  top:        0
+  width:      100%
+  color:      $grey
+  cursor:     pointer
+  position:   absolute
   text-align: right
-  color: $grey
-  cursor: pointer
-  adaptive-block(width, line-height)
+  adaptive-block(line-height)
   &:after
     content: "+"
 
@@ -30,7 +32,8 @@
     content: "-"
 
 .result
-  margin: $block_size*0.25
+  margin:   $block_size*0.25
+  position: relative
 
 .expandable-content
   margin: $block_size*0.25 0
