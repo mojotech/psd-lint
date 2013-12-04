@@ -5,4 +5,4 @@ App.module "Models", (Models, App, Backbone, Marionette, $, _) ->
       view: 'FontSizes'
 
     countCalc: (d) -> _.keys(d).length
-    grade: (d) -> 6  / _.keys(d).length
+    grade: (d) -> 6  / @countCalc(d)

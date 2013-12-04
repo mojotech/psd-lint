@@ -6,6 +6,6 @@ App.module "Models", (Models, App, Backbone, Marionette, $, _) ->
 
     countCalc: (d) -> d.length
     grade: (d) ->
-      if d.length
+      if @countCalc(d)
         return 0
       1
