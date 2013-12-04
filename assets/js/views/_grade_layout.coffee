@@ -10,8 +10,8 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
         title: "Poorly named layers"
         data: LNT.getBadLayerNames(@options.psd),
         view: 'BadLayers'
-        grade: (d) ->
-          LNT.getBadLayerNames(@options.psd) / d.length + .20
+        grade: (d) =>
+          d.length / LNT.getTotalCount(@options.psd) + .20
       }, {
         countCalc: (d) -> _.keys(d).length
         title: "Different fonts in use"
@@ -23,7 +23,7 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
         title: "Blending modes used"
         data: LNT.getBlendingModes(@options.psd)
         view: 'BlendingModes'
-        grade: (d) -> 1
+        grade: (d) -> undefined
       }, {
         countCalc:(d) -> _.keys(d).length
         title: "Different font sizes"

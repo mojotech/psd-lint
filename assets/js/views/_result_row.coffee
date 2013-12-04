@@ -12,6 +12,10 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
     expandRow: ->
       @$el.toggleClass 'expanded'
 
+    serializeData: ->
+      _.extend {}, @model.attributes,
+        grade: @model.get('grade')(@model.get('data'))
+
     templateHelpers: ->
       countCalulation: @model.get('countCalc')
 
