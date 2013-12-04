@@ -3,7 +3,7 @@
 
   LNT.getBadLayerNames = function(PSD) {
     return (_.filter(getLayerNames(PSD), function(v) {
-      return ~v.indexOf('Layer ');
+      return ~v.indexOf('Layer ') || ~v.indexOf(' copy');
     }));
   }
 
