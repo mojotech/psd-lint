@@ -6,3 +6,5 @@
 #= require "vendor/_jquery.fileupload.ui.js"
 #= require "vendor/_jquery.iframe-transport.js"
 #= require "vendor/_jquery.fileupload.js"
+#= require "vendor/_jquery.fileupload.processing.js"
+#= require "vendor/_jquery.fileupload.validate.js"

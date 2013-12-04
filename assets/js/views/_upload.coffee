@@ -13,6 +13,7 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
     onShow: ->
       @$('#fileupload').fileupload
         dataType: 'json'
+        acceptFileTypes:  /(\.|\/)(psd)$/i
         progressall: (e, data)  =>
           progress = parseInt(data.loaded / data.total * 100, 10)
           @$('#progress .bar').css
