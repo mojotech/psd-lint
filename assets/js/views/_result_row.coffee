@@ -1,7 +1,11 @@
 App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
   class Views.ResultRow extends Marionette.Layout
     tagName: 'li'
-    template: templates.result_row
+    getTemplate: ->
+      if @model.get('resultTemplate')?
+        return @model.get('resultTemplate')
+      templates.result_row
+
     className: 'result'
     regions:
       expandableContent: '.expandable-content'
@@ -14,7 +18,7 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
 
     serializeData: ->
       _.extend {}, @model.attributes,
-        grade: @model.grade(@model.get('data'))
+        grade: @model.grade?(@model.get('data'))
 
     templateHelpers: ->
       countCalulation: @model.countCalc
