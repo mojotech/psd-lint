@@ -16,6 +16,5 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
       countCalulation: @model.get('countCalc')
 
     onShow: ->
-      if @model?.get('view')?
-        v = App.Views[@model.get('view')]
-        @expandableContent.show new v(model: @model)
+      v = App.Views[@model.get('view')]
+      @expandableContent.show new v(model: @model)
