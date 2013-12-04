@@ -1,14 +1,17 @@
 .font-used
   overflow: hidden
 
-.text-orb.used-in-count
-  font-size: 13px
-  cursor: pointer
+.expandable-row.expanded > .text-orb.used-in-count
+  &:after
+    content: '-'
 
-.expand-font
-  margin-left: 8px
-  display: inline-block
-  font-weight: bold
+.text-orb.used-in-count
+  cursor:         pointer
+  font-size:      13px
+  padding-right:  10px
+  &:after
+    content:     '+'
+    margin-left: 6px
 
 .layer-list-expansion
   clear: both

@@ -15,4 +15,4 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
       'click .used-in-count': 'expandRow'
 
     expandRow: ->
-      @$('.expandable-content').toggle()
+      @$el.toggleClass 'expanded'
