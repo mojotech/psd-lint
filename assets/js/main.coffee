@@ -1,6 +1,7 @@
 #= require "config.js"
 #= require "vendor/_jquery.js"
 #= require "vendor/_lodash.js"
+#= require "vendor/_bootstrap.js"
 #= require "vendor/_backbone.js"
 #= require "vendor/_backbone.marionette.js"
 #= require "vendor/_jquery.fileupload.ui.js"
