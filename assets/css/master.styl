@@ -30,6 +30,14 @@ global-reset()
   padding: 6px 12px
   display: inline-block
   border: solid 2px #eee
+  max-width: 120px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  cursor: e-resize
+
+  &:active
+    max-width: none
 
 .app-headline
   text-align: center
