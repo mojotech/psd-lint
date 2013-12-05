@@ -26,3 +26,6 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
           App.appRegion.show new App.Views.GradeLayout({
             psd: data.result
           })
+        error: ->
+          alert "Oh no something bad happend, shoot us a note at sam <at> mojotech.com"
+          window.location = window.location
