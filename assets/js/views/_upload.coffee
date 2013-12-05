@@ -1,6 +1,6 @@
 App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
-    __name__: "Upload"
   class Views.Upload extends Marionette.Layout
+    __name__: "Upload"
     className: 'uploader'
     getTemplate: ->
       if @uploadComplete
@@ -28,5 +28,5 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
             psd: data.result
           })
         error: ->
-          alert "Oh no something bad happend, shoot us a note at sam <at> mojotech.com"
+          alert "Oh no something bad happend, try again or shoot us a note at sam <at> mojotech.com"
           window.location = window.location
