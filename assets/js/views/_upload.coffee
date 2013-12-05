@@ -5,7 +5,8 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
       if @uploadComplete
         return templates.processing
 
-      templates.uploader
+      # templates.uploader
+      templates.processing
 
     templateHelpers:
       workerPath: window.config.workerPath

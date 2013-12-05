@@ -6,7 +6,14 @@ global-reset()
 @import "_layers"
 @import "_fonts"
 @import "_upload"
+@import "_processing"
 @import "_footer"
+
+html
+  background: $seafoam
+  font-family: 'Open Sans', sans-serif;
+  transition(all  300ms)
+  -webkit-font-smoothing: antialiased
 
 .cl
   clear: both
@@ -47,15 +54,3 @@ global-reset()
 
 .expandable-content
   display: none
-
-html
-  font-family: helvetica
-  font-weight: 400
-  font-size: $large_font
-  transition(all  300ms)
-
-  @media screen and (max-width: 600px)
-    font-size: $large_font * 0.6
-
-#app
-  padding-bottom: $footer_height
