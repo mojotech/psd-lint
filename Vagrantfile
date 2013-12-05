@@ -6,6 +6,16 @@ Vagrant.configure("2") do |config|
   config.berkshelf.enabled    = true
   config.omnibus.chef_version = :latest
 
+  config.vm.provider :digital_ocean do |provider, override|
+    override.ssh.private_key_path = '~/.ssh/id_rsa'
+    override.vm.box = 'digital_ocean'
+    override.vm.box_url = "https://github.com/smdahlen/vagrant-digitalocean/raw/master/box/digital_ocean.box"
+
+    provider.client_id = ENV['DIGITAL_OCEAN_CLIENT_ID']
+    provider.api_key = ENV['DIGITAL_OCEAN_API_KEY']
+    provider.private_networking = true
+  end
+
   config.vm.provision :chef_solo do |chef|
     chef.add_recipe 'docker'
   end
