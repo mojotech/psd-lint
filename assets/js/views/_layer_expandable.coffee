@@ -1,5 +1,6 @@
 App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
   class Views.LayerExpandable extends Marionette.Layout
+    __name__: "Layer Expandable"
     regions:
       'expandable': '.expandable-content'
 

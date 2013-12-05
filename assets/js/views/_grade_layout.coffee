@@ -1,5 +1,6 @@
 App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
   class Views.GradeLayout extends Marionette.Layout
+    __name__: "Grade Layout"
     template: templates.grade_layout
     regions:
       'results': '.results'

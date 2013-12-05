@@ -2,6 +2,7 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
   class Views.ResultRow extends Marionette.Layout
     tagName: 'li'
     className: 'result'
+    __name__: "Result Row"
 
     regions:
       expandableContent: '.expandable-content'

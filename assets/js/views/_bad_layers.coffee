@@ -1,6 +1,7 @@
 App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
   class Views.BadLayers extends Marionette.CollectionView
     tagName: 'ul'
+    __name__: "Bad Layers"
     constructor: ->
       super
       unless @collection

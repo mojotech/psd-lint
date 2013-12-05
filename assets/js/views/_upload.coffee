@@ -1,4 +1,5 @@
 App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
+    __name__: "Upload"
   class Views.Upload extends Marionette.Layout
     className: 'uploader'
     getTemplate: ->

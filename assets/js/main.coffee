@@ -3,6 +3,7 @@
 #= require "vendor/_lodash.js"
 #= require "vendor/_bootstrap.js"
 #= require "vendor/_backbone.js"
+#= require "vendor/_caliper.backbone-0.4.2.min.js"
 #= require "vendor/_backbone.marionette.js"
 #= require "vendor/_jquery.fileupload.ui.js"
 #= require "vendor/_jquery.iframe-transport.js"

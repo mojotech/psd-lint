@@ -1,5 +1,6 @@
 App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
   class Views.Results extends Marionette.CompositeView
+    __name__: "Results"
     getTemplate: -> templates.results
     itemViewContainer: 'ul'
     getItemView: -> Views.ResultRow
