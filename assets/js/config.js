@@ -2,7 +2,7 @@
   var data;
 
   data = {
-    title: 'PSD Lint',
+    title: 'PSD Grade',
     workerPath: 'process/'
   };
 
