@@ -1,25 +1,36 @@
+$block_size = 60px
+
 .results
   max-width: 900px
   margin: 0 auto
+  background: $off_white
+  padding: $block_size * 0.5
 
-.result-count
+.result-count, .result-grade, .warning
+  color: #FFF
+  width: $block_size
+  height: $block_size
   display: inline-block
   background: $seafoam
-  color: #FFF;
-  font-weight: 100
   text-align: center
-  adaptive-block(width, height, line-height)
+  font-weight: bold
+  font-size: 21px
+  line-height: $block_size
+  box-sizing: border-box
+  border: solid 2px $seafoam
 
 .result-title
-  margin-left: $block_size * .5
+  color $grey
+  font-weight: bold
+  font-size: 21px
   display: inline-block
-  color: $grey
-  font-weight: 200
+  margin-left: $block_size * 0.35
 
 .result-grade
-  top:      0
-  left:     0
-  position: absolute
+  margin-right: $block_size * 0.35
+  border-radius 3px
+  color $grey
+  background: transparent
 
 .result .expand
   top:        0
@@ -29,6 +40,9 @@
   position:   absolute
   text-align: right
   adaptive-block(line-height)
+  color: $orange
+  font-weight: bold
+  font-size: 31px
   &:after
     content: "+"
 
@@ -39,21 +53,29 @@
 .result
   margin:   $block_size*0.25
   position: relative
+  border-bottom: solid 1px #e6e6e6
+  padding-bottom: 18px
 
 .expandable-content
   margin: $block_size*0.25 0
+  padding-left: $block_size * 1.35
+
+.expandable-row .expandable-content
+  padding-left: 0
 
 .warning
-  color:        rgb(158, 62, 62)
-  width:        $warning_block
-  height:       $warning_block
-  display:      block
-  font-size:    21px
-  text-align:   center
-  background:   rgb(255, 116, 116)
-  line-height:  $warning_block
-  margin-right: 10px;
-  border-radius: 5px;
+  background: transparent
+  border-color: $orange
+  color: $orange
+  margin-right: $block_size * 0.35
+  border-radius: 3px
+  position: relative
+  z-index: 100
+  &.small
+    height: 30px
+    width: 30px
+    line-height: 27px
+    margin-right: 10px
 
 .result-row.warning
   top:      0
