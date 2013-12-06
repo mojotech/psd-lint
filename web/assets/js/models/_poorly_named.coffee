@@ -6,4 +6,6 @@ App.module "Models", (Models, App, Backbone, Marionette, $, _) ->
 
     countCalc: (d) -> d.length
     grade: (d) =>
-      @countCalc(d) / LNT.getTotalCount(@get('psd')) + .20
+      if @countCalc(d) is 0
+        return 1
+      Math.min(@countCalc(d) / LNT.getTotalCount(@get('psd')) + .20, 1)
