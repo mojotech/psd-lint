@@ -10,7 +10,9 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
         return m.grade(m.get('data')) if m.grade?
       ), (v) -> return v?
 
-      grade = (_.reduce grades, (m, n) -> m + n) / grades.length
+      grade = (_.reduce grades, (m, n) ->
+        m = 1 if m is Infinity
+        m + n) / grades.length
 
       grade: grade
       letter: (new App.Models.LintResult).toLetter(grade)
