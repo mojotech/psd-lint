@@ -20,17 +20,54 @@ Vagrant.configure("2") do |config|
     chef.add_recipe 'docker'
   end
 
-  config.vm.provision :shell, inline: <<-SHELL
-    sudo docker build -t web /vagrant/web
-    sudo docker stop web
-    sudo docker rm web
-    sudo docker run -d -v /vagrant/web/public:/public -p 80:80 -name web web
+  config.vm.define :web_1 do |machine|
+    machine.vm.hostname = "psdgrade-web-1"
+    machine.vm.provision :shell, inline: <<-SHELL
+      sudo docker build -t web /vagrant/web
+      sudo docker stop web
+      sudo docker rm web
+      sudo docker run -d -v /vagrant/web/public:/public -p 80:80 -name web web
+    SHELL
+  end
 
-    sudo docker build -t app /vagrant/app
-    sudo docker stop app
-    sudo docker rm app
-    sudo docker run -d -p 81:80 -name app app
-  SHELL
+  config.vm.define :app_1 do |machine|
+    machine.vm.hostname = "psdgrade-app-1"
+    machine.vm.provision :shell, inline: <<-SHELL
+      sudo docker build -t app /vagrant/app
+      sudo docker stop app
+      sudo docker rm app
+      sudo docker run -d -p 80:80 -name app app
+    SHELL
+  end
 
+  config.vm.define :app_2 do |machine|
+    machine.vm.hostname = "psdgrade-app-2"
+    machine.vm.provision :shell, inline: <<-SHELL
+      sudo docker build -t app /vagrant/app
+      sudo docker stop app
+      sudo docker rm app
+      sudo docker run -d -p 80:80 -name app app
+    SHELL
+  end
+
+  config.vm.define :app_3 do |machine|
+    machine.vm.hostname = "psdgrade-app-3"
+    machine.vm.provision :shell, inline: <<-SHELL
+      sudo docker build -t app /vagrant/app
+      sudo docker stop app
+      sudo docker rm app
+      sudo docker run -d -p 80:80 -name app app
+    SHELL
+  end
+
+  config.vm.define :app_4 do |machine|
+    machine.vm.hostname = "psdgrade-app-4"
+    machine.vm.provision :shell, inline: <<-SHELL
+      sudo docker build -t app /vagrant/app
+      sudo docker stop app
+      sudo docker rm app
+      sudo docker run -d -p 80:80 -name app app
+    SHELL
+  end
 end
 
