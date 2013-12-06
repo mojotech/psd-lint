@@ -3,7 +3,7 @@
 
 .grade
   h1 Your PSD is a
-    span #{(grade*100).toFixed(0)}% #{letter}
+    span #{Math.min(((grade*100).toFixed(0)), 100)}% #{letter}
 ul
 
 script.
