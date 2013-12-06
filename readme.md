@@ -1,43 +1,32 @@
 # Psd Lint
 
+Keeping your PSDs clean since 1663.
+
 ### Dev
 
+You need both [ruby](https://github.com/sstephenson/rbenv) (with [bundler](http://bundler.io/)) and [node](http://nodejs.org/) to be installed in order to work on this locally.
+
 #### Setup
-* brew install nginx
-* open /usr/local/etc/nginx/nginx.conf
-  * set your file contents to
-  * ```
-      events {
-      }
 
-      http {
-        server {
-          client_max_body_size 200M;
-
-          location /process {
-            proxy_pass "http://localhost:4567/";
-            proxy_set_header Host $http_host;
-          }
-
-          location / {
-            proxy_pass "http://localhost:1111";
-            proxy_set_header Host $http_host;
-          }
-        }
-      }
-    ```
-* ```npm install -g roots```
-* ```bundle install```
+* `brew install nginx`
+* `cp config/nginx.conf /usr/local/etc/nginx/nginx.conf`
+* `npm install roots -g`
+* `bundle`
 
 #### Developing
-* ```sudo nginx```
-  * to stop ```sudo nginx -s stop```
-* ```bundle exec ruby app/app.rb```
-* ```roots watch web```
-* ```open http://localhost/```
-* profit
 
-### Tests in place
+* `sudo nginx`
+  * to stop `sudo nginx -s stop`
+* `bundle exec ruby app/app.rb`
+* `roots watch web`
+* `open http://localhost`
+* ???
+* get money
+
+### Testing
+
+#### Tests in place
+
 * Find all unnamed layers
 * Find all font's used
 * Find group to layer ratio
@@ -45,9 +34,10 @@
 * Find all font sizes used
 * Find all empty groups
 
-### Adding Tests
+#### Adding Tests
+
 * create a new test file
-* walk through the PSD tree using ```LNT.propertyWalker```
+* walk through the PSD tree using `LNT.propertyWalker`
 
 
 ```js
