@@ -11,6 +11,11 @@ App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
     templateHelpers:
       workerPath: window.config.workerPath
 
+    events: ->
+      "click .sample": ->
+        App.appRegion.show new App.Views.GradeLayout
+          psd: window.sample_psd
+
     onShow: ->
       @$('#fileupload').fileupload
         dataType: 'json'
