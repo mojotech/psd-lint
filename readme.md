@@ -32,8 +32,8 @@
 #### Developing
 * ```sudo nginx```
   * to stop ```sudo nginx -s stop```
-* ```bundle exec ruby app.rb```
-* ```roots watch```
+* ```bundle exec ruby app/app.rb```
+* ```roots watch web```
 * ```open http://localhost/```
 * profit
 
