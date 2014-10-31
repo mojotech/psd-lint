@@ -30,3 +30,4 @@ vendor/bundle
 *.log
 public
 deploy.conf
+node_modules
