@@ -11,14 +11,15 @@ You need both [ruby](https://github.com/sstephenson/rbenv) (with [bundler](http:
 * `brew install nginx`
 * `cp config/nginx.conf /usr/local/etc/nginx/nginx.conf`
 * `npm install roots -g`
-* `bundle`
+* `cd app && bundle`
+* `cd web && npm i`
 
 #### Developing
 
 * `sudo nginx`
   * to stop `sudo nginx -s stop`
 * `bundle exec ruby app/app.rb`
-* `roots watch web`
+* `cd web && npm run dev`
 * `open http://localhost`
 * ???
 * get money

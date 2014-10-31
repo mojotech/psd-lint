@@ -4,7 +4,7 @@ module.exports =
     'readme*',
     'Dockerfile'
     ]
-  ignore_folders: ['.git', 'config']
+  ignore_folders: ['.git', 'config', 'node_modules']
 
   watcher_ignore_folders: ['components']
 
